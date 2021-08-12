@@ -1,0 +1,17 @@
+<input name="email" type="text" id="email" size="35" />
+<input onclick="valida_form()" type="submit" value="asdasd">
+
+<script type="text/javascript" language="javascript">
+    function valida_form() {
+        var filter = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+        if (!filter.test(document.getElementById("email").value)) {
+            alert('Por favor, digite o email corretamente');
+            document.getElementById("email").focus();
+            return false
+        } else {
+            alert("tranquilo");
+            return false
+
+        }
+    }
+</script>

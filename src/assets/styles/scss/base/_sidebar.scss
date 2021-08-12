@@ -1,0 +1,114 @@
+.sidebar-container {
+    padding: 4.5rem 0 0 0;
+    height: 100%;
+    z-index: 1001;
+}
+
+.sidebar {
+    width: 250px;
+    height: 100%;
+    overflow-y: scroll;
+    background: #2a3042;
+    box-shadow: 0 0.75rem 1.5rem rgba(18, 38, 63, 0.03);
+    transition: width ease 0.1s;
+    &--collapsed {
+        transition: width ease 0.35s;
+        width: 70px;
+    }
+}
+
+.sidebar-menu {
+    ul,
+    li {
+        padding-left: 0.2rem;
+        list-style: none;
+    }
+    a,
+    a:not([href]) {
+        display: block;
+        padding: 0.625rem 1.5rem;
+        color: #79829c;
+        position: relative;
+        font-size: 13px;
+        text-decoration: none;
+        transition: color 0.35s;
+        cursor: pointer;
+        user-select: none;
+        &:hover {
+            color: #fff;
+            transition: color 0.35s;
+        }
+    }
+    ul>li>a,
+    ul>li>a:not([href]) {
+        padding: 0.4rem 1.5rem 0.4rem 3.5rem;
+    }
+    a>span,
+    li>span {
+        transition: opacity 1s;
+    }
+    // ul > li > a:not([href]):hover,
+    // a:hover {
+    //   color: #fff;
+    // }
+    &--activated {
+        color: #fff !important;
+    }
+    &--collapsed {
+        a>span,
+        li>span {
+            opacity: 0;
+            transition: opacity 0.1s;
+        }
+        li {
+            padding: 0;
+        }
+        i {
+            font-size: 1.45rem;
+            margin-left: 4px;
+        }
+    }
+}
+
+.sidebar-icon {
+    display: inline-block;
+    min-width: 1.75rem;
+    padding-bottom: 0.125em;
+    font-size: 1.25rem;
+    line-height: 1.40625rem;
+    vertical-align: middle;
+    transition: font, margin, transform 0.4s;
+}
+
+.sidebar-content {
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+.sidebar-separator {
+    padding: 12px 20px;
+    letter-spacing: 0.05em;
+    pointer-events: none;
+    cursor: default;
+    font-size: 11px;
+    text-transform: uppercase;
+    color: #7f8387;
+    font-weight: 600;
+    &--color {
+        color: $text-color-1;
+    }
+}
+
+@media only screen and (max-width: 600px) {}
+
+// .vertical-menu {
+//   width: 250px;
+//   z-index: 1001;
+//   background: #fff;
+//   bottom: 0;
+//   margin-top: 0;
+//   position: fixed;
+//   top: 70px;
+//   -webkit-box-shadow: 0 .75rem 1.5rem rgba(18,38,63,.03);
+//   box-shadow: 0 .75rem 1.5rem rgba(18,38,63,.03);
+// }

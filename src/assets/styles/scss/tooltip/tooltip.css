@@ -1,0 +1,22 @@
+.wmtooltip {
+    position: relative;
+}
+
+.wmtooltip:after {
+    white-space: nowrap;
+    padding: 3px;
+    background-color: #fff;
+    color: #000;
+    font-size: 12px;
+    content: attr(data-tooltip);
+    display: none;
+    position: absolute;
+    right: 0px;
+    bottom: -40px;
+    z-index: 3;
+    border: solid #000 1px;
+}
+
+.wmtooltip:hover:after {
+    display: block;
+}

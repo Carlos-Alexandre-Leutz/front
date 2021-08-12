@@ -1,0 +1,9 @@
+.dropdown-content {
+  margin: 0;
+  position: absolute;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
+  animation-name: DropDownSlide;
+  animation-duration: 0.3s;
+  animation-fill-mode: both;
+  z-index: 1000;
+}

@@ -1,0 +1,12 @@
+{
+    "version": 3,
+    "mappings": "AGAA,AAAA,cAAc,CAAC;EACb,UAAU,EAAE,IAAI;EAChB,YAAY,EAAE,CAAC;CAChB",
+    "sources": [
+        "mixins.scss",
+        "screen-breakpoints/_screen-breakpoints.scss",
+        "flexbox/flexbox.scss",
+        "list/list.scss"
+    ],
+    "names": [],
+    "file": "mixins.css"
+}

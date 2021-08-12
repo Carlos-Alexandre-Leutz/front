@@ -1,0 +1,65 @@
+.custom-switch {
+    .custom-switch-input+.custom-switch-btn {
+        box-sizing: border-box;
+        display: inline-block;
+        position: relative;
+        cursor: pointer;
+        width: 58px;
+        height: 28px;
+        margin: 0;
+        padding: 4px;
+        background: #ced4da;
+        border-radius: 76px;
+        transition: all 0.3s ease;
+        border: 1px solid #ced4da;
+        &:after {
+            position: relative;
+            display: block;
+            content: "";
+            width: 18px;
+            height: 18px;
+            left: 2px;
+            border-radius: 50%;
+            background: #fff;
+            transition: all 0.3s ease;
+        }
+        &:before {
+            position: relative;
+            display: block;
+            content: "";
+            width: 18px;
+            height: 18px;
+            display: none;
+        }
+    }
+}
+
+.custom-switch-small {
+    height: 23px;
+    .custom-switch-input+.custom-switch-btn {
+        width: 42px;
+        height: 23px;
+        &:after {
+            width: 14px;
+            height: 14px;
+            left: 0;
+            top: -1px;
+        }
+        &:before {
+            width: 14px;
+            height: 14px;
+            left: 0;
+            top: -1px;
+        }
+    }
+    .custom-switch-input {
+        display: none;
+        &:checked+.custom-switch-btn {
+            &:after {
+                left: 18px;
+                background-color: #777;
+                border: solid 1px #999;
+            }
+        }
+    }
+}

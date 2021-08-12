@@ -1,0 +1,39 @@
+<div id="paiDeTodos">
+
+</div>
+<script>
+    let array = [{
+        "id": "5e917252-17c6-4490-91e7-129240a4e85a",
+        "descricao": "string",
+        "descricaoPai": null
+    }, {
+        "id": "a776650a-3c43-4355-830c-686cd21d18aa",
+        "descricao": "teste",
+        "descricaoPai": null
+    }, {
+        "id": "4a50a6ee-ed54-44f8-8b55-c565a14dad05",
+        "descricao": "Filho do teste",
+        "descricaoPai": "teste"
+    }]
+    var conter = 0;
+    var html = '<div>';
+
+    function verificaRelacionamento(element) {
+        conter++
+        let elemento = element;
+        html += `<div id="colapser-${conter}"  @click="alertaID("colapser-${conter}")" >Id: ${elemento.id} Descrição: ${elemento.descricao} Descrição do pai ${elemento.descricaoPai}</div>`;
+        let idRotativo = 'teste' + conter;
+        console.log(conter)
+
+        console.log(html)
+        document.getElementById("paiDeTodos").innerHTML = html;
+
+
+    }
+    array.forEach(verificaRelacionamento)
+
+    function alertaID(a) {
+        alert(a)
+
+    }
+</script>

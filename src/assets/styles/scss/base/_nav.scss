@@ -1,0 +1,41 @@
+.navbar {
+  display: flex;
+  // justify-content: space-between;
+  align-items: inherit;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  margin: 0 auto;
+  height: 4.5rem;
+  padding: 0rem 0.3rem 0rem 0rem;
+  z-index: $nav-index;
+  background-color: #fff;
+  box-shadow: 0 0.75rem 1.5rem rgba(18, 38, 63, 0.03);
+}
+
+.navbar-brand-box {
+  display: flex;
+  padding: 0 1.5rem;
+  // text-align: center;
+  justify-content: space-between;
+  align-items: center;
+  width: 250px;
+  background: #2a3042;
+  transition: width ease 0.1s;
+  &--collapsed {
+    width: 70px;
+    transition: width ease 0.35s;
+  }
+}
+
+.vertical-menu-btn {
+}
+
+.navbar-item {
+  color: #555b6d;
+  // height: 100%;
+  box-shadow: none !important;
+  border: 0;
+  border-radius: 0;
+}
